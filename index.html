@@ -25,7 +25,7 @@
     /**
      * The Project ID of your Google Cloud Storage Project.
      */
-    var PROJECT = 'YOUR_PROJECT_ID';
+    var PROJECT = 'molten-nirvana-651';
 
     /**
      * Enter a client ID for a web application from the Google Developers
@@ -35,7 +35,7 @@
      * script. For more info see:
      * https://developers.google.com/console/help/new/#generatingoauth2
      */
-    var clientId = 'YOUR_CLIENT_ID';
+    var clientId = '566290349715-kbn1vemj4963ot2rvn7hf35du7fiq31r.apps.googleusercontent.com';
 
    /**
     * Enter the API key from the Google Developers Console, by following these
@@ -47,7 +47,7 @@
     * should display "Any referer allowed." For more info see:
     * https://developers.google.com/console/help/new/#generatingdevkeys
     */
-    var apiKey = 'YOUR_API_KEY';
+    var apiKey = 'AIzaSyD6yYSh-Tdu3KGElA7HlrMS8iPgwJw56zA';
 
     /**
      * To enter one or more authentication scopes, refer to the documentation
@@ -172,7 +172,7 @@
      */
     function listObjects() {
       var request = gapi.client.storage.objects.list({
-        'bucket': BUCKET
+        'bucket': bucky-buckface-buck.deez-nuts
       });
       executeRequest(request, 'listObjects');
     }
@@ -183,7 +183,7 @@
      */
     function listBucketsAccessControls() {
       var request = gapi.client.storage.bucketAccessControls.list({
-          'bucket': BUCKET
+          'bucket': bucky-buckface-buck.deez-nuts
       });
       executeRequest(request, 'listBucketsAccessControls');
     }
@@ -194,7 +194,7 @@
      */
     function listObjectsAccessControls() {
       var request = gapi.client.storage.objectAccessControls.list({
-          'bucket': BUCKET,
+          'bucket': bucky-buckface-buck.deez-nuts,
           'object': object
       });
       executeRequest(request, 'listObjectsAccessControls');
@@ -206,7 +206,7 @@
      */
     function getBucket() {
       var request = gapi.client.storage.buckets.get({
-        'bucket': BUCKET
+        'bucket': bucky-buckface-buck.deez-nuts
       });
       executeRequest(request, 'getBucket');
     }
@@ -217,8 +217,8 @@
      */
     function getBucketAccessControls() {
       var request = gapi.client.storage.bucketAccessControls.get({
-        'bucket': BUCKET,
-        'entity': GROUP
+        'bucket': bucky-buckface-buck.deez-nuts,
+        'entity': group-00b4903a9706770ebf49b4c0faaa3b0ccaf2d62d1438f5866be20b4a886c16f9
       });
       executeRequest(request, 'getBucketAccessControls');
     }
@@ -229,9 +229,9 @@
      */
     function getObjectAccessControls() {
       var request = gapi.client.storage.objectAccessControls.get({
-        'bucket': BUCKET,
+        'bucket': bucky-buckface-buck.deez-nuts,
         'object': object,
-        'entity': GROUP
+        'entity': group-00b4903a9706770ebf49b4c0faaa3b0ccaf2d62d1438f5866be20b4a886c16f9
       });
       executeRequest(request, 'getObjectAccessControls');
     }
@@ -242,7 +242,7 @@
      */
     function insertBucket() {
       resource = {
-        'name': BUCKET
+        'name': bucky-buckface-buck.deez-nuts
       };
 
       var request = gapi.client.storage.buckets.insert({
@@ -295,7 +295,7 @@
         //small objects (under 64k) so to support larger file sizes
         //we're using the generic HTTP request method gapi.client.request()
         var request = gapi.client.request({
-          'path': '/upload/storage/v1beta2/b/' + BUCKET + '/o',
+          'path': '/upload/storage/v1beta2/b/' + bucky-buckface-buck.deez-nuts + '/o',
           'method': 'POST',
           'params': {'uploadType': 'multipart'},
           'headers': {
@@ -330,7 +330,7 @@
       };
 
       var request = gapi.client.storage.bucketAccessControls.insert({
-          'bucket': BUCKET,
+          'bucket': bucky-buckface-buck.deez-nuts,
           'resource': resource
       });
       executeRequest(request, 'insertBucketAccessControls');
@@ -347,7 +347,7 @@
       };
 
       var request = gapi.client.storage.objectAccessControls.insert({
-          'bucket': BUCKET,
+          'bucket': bucky-buckface-buck.deez-nuts,
           'object': object,
           'resource': resource
       });
@@ -359,7 +359,7 @@
      */
     function deleteBucket() {
       var request = gapi.client.storage.buckets.delete({
-          'bucket': BUCKET
+          'bucket': bucky-buckface-buck.deez-nuts
       });
       executeRequest(request, 'deleteBucket');
     }
@@ -369,7 +369,7 @@
      */
     function deleteObject() {
       var request = gapi.client.storage.objects.delete({
-          'bucket': BUCKET,
+          'bucket': bucky-buckface-buck.deez-nuts,
           'object': object
       });
       executeRequest(request, 'deleteObject');
